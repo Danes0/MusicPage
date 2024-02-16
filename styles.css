@@ -1,0 +1,867 @@
+/* Set the UTF-8 character encoding and add the Google font */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Base style to reset margins and fill boxes, and set the default font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+/* Styles for h1, h2, h4 and paragraph headings */
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 45px;
+}
+
+h4 {
+    font-weight: 700;
+}
+
+p {
+    font-size: 18px;
+    margin: 15px 0 20px 0;
+}
+
+/* Styles for sections with classes section-p1 and section-p2 */
+.section-p1 {
+    padding: 40px 80px;
+
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+
+/* Styles for the body of the document */
+body {
+    width: 100%;
+    color: #222;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* Styles for the header, including the logo and navigation bar */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#header .logo {
+    width: 110px;
+    height: 110px;
+}
+
+/* Styles for the navigation bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #714c90;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+}
+
+/* Styles for the mobile version of the menu */
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+/* Styles for the banner section */
+#banner {
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+
+/****************************Home Page****************************/
+/* Styles for the hero section (main banner) */
+#hero {
+    background-image: url("../images/home/mainbanner.png");
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+/* Styles for the h4 heading in the hero section */
+#hero h4 {
+    padding-bottom: 25px;
+    font-size: 25px;
+}
+
+/* Styles for the h1 heading in the hero section */
+#hero h1 {
+    color: #088178;
+}
+
+/* Styles for the button in the hero section */
+#hero a button {
+    background-image: url("../images/home/Buttom1.png");
+    background-color: transparent;
+    color: #088178;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 24px;
+}
+/* Styles for the featured section */
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Styles for the feature boxes */
+#feature .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px  rgba(0, 0, 0, 0.03) ;
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+/* Styles when hovering over feature boxes */
+#feature .fe-box:hover {
+    box-shadow: 10px 10px 54px  rgba(70, 62, 221, 0.1) ;
+}
+/* Styles for images inside feature boxes */
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+/* Styles for the "h6" text inside feature boxes */
+#feature .fe-box h6 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #020202;
+    background-color: #fddde4;
+}
+/* Styles for the second feature box's "h6" text */
+#feature .fe-box:nth-child(2) h6 {
+    background-color: #9ed69e;
+}
+
+/* Styles for the third feature box's "h6" text */
+#feature .fe-box:nth-child(3) h6 {
+    background-color: rgb(181, 195, 235);
+}
+/* Styles for the featured products section */
+#product1 {
+    text-align: center;
+}
+/* Styles for the product container */
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+/* Styles for individual products */
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+/* Styles when hovering over products */
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+}
+
+/* Styles for images inside products */
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Styles for text alignment and padding in the product description */
+#product1 .pro .des {
+    text-align: start;
+    padding: 10px 0;
+}
+
+/* Styles for the specific span element within the product description */
+#product1 .pro  .des .span {
+    color: #606063;
+    font-size: 12px;
+}
+
+/* Styles for "h5" and "h4" text inside products */
+#product1 .pro  .des h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    color: #714c90;
+    font-size: 14px;
+    text-align: justify;
+    text-transform: capitalize;
+}
+/* Style applied to star icons in product descriptions */
+#product1 .pro  .des i {
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+/* Styles for the main banner section (mainbanner) */
+#mainbanner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("../images/home/mainbanner2.png");
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Styles for the h4 heading in the main banner section */
+#mainbanner h4 {
+    color: #E3E6F3;
+    font-size: 30px;
+    padding: 10px 0;
+}
+/* Styles for the h2 heading in the main banner section */
+#mainbanner h2 {
+    color: #E3E6F3;
+    font-size: 27px;
+    padding: 10px 0;
+}
+
+/* Styles for the highlighted "span" text in the main banner section */
+#mainbanner span {
+    color: #f473d6;
+}
+
+/* Styles when hovering over the button in the main banner section */
+#mainbanner button:hover {
+    background-color: #6a4886;
+
+}
+/* Styles for the newsletter section */
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color:#224268;
+}
+
+/* Styles for the h4 heading in the newsletter section */
+#newsletter h4{
+    font-size: 30px;
+    font-weight: 700;
+    color: #E3E6F3;
+}
+/* Styles for paragraph elements within the #newsletter section */
+#newsletter p {
+    font-size: 22px;
+    font-weight: 600;
+    color: #b4bde4;
+}
+/* Styles for <span> elements within paragraph elements in the #newsletter section */
+#newsletter p span {
+    color: #f88bd7;
+}
+
+/* Styles for the form container within the #newsletter section */
+#newsletter .form {
+    display: flex;
+    width: 30%;
+}
+/* Styles for the input field within the #newsletter section */
+#newsletter input {
+    height: 3.125rem;
+    padding:0 1.25em;
+    font-size: 18px;
+    width: 100%;
+    border:  1px solid transparent;
+    border-radius: 6px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+/* Styles for the button within the #newsletter section */
+#newsletter button {
+    background-color: #439f98;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0);
+    z-index: 1000;
+}
+
+/****************************Shop page****************************/
+/* Promotions banner with background image */
+#banner.promotion-banner {
+    background-image: url(../images/Shop/banner_sale.png);
+}
+
+#product1  h2, p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#product1 .pro .hover-img {
+    display: none;
+}
+
+/* Styles applied to the h3, h4 and h6 elements in the product description */
+#product1 .pro .des h3, h4, h6 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#product1 .pro .des h3 {
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+#product1 .pro .des h6 {
+    color: red;
+}
+
+/* Styles applied to pagination in the product catalog */
+#pagination {
+    text-align: center;
+}
+
+#pagination a {
+    text-decoration: none;
+    background-color: #714c90;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Styles applied to pagination arrow icons */
+#pagination a i {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/****************************about us****************************/
+/* Style for the banner in the "about" page */
+#banner.about-banner {
+    background-image: url('../images/about_banner.png');
+}
+/* Style for paragraphs within the banner */
+#banner.about-banner p {
+    font-size: 22px;
+    font-style: italic;
+    text-align: center;
+}
+/* Style for the "about-page" section */
+#about-page {
+    display: flex;
+    justify-content:space-between ;
+
+}
+/* Justified alignment for paragraphs within "about-page" */
+#about-page p{
+    text-align: justify;
+}
+/* Style for images within "about-page" */
+#about-page img {
+    width: 48%;
+    height: auto;
+}
+/* Padding for the "about" and "delivery" sections within "about-page" */
+#about-page .about,
+.delivery {
+    padding-left: 20px;
+}
+/* Style for <h3> headings within "about-page" */
+#about-page h3{
+    color: #8218b7;
+}
+/* Specific style for <h3> headings within the "about" section */
+#about-page .about h3{
+    font-size: 30px;
+}
+/* Specific style for <h3> headings within the "delivery" section */
+#about-page .delivery h3{
+    font-size: 31px;
+}
+/* Style for paragraphs within the "about" section */
+#about-page .about p{
+    font-size: 27px;
+}
+/* Style for paragraphs within the "delivery" section */
+#about-page .delivery p{
+    font-size: 27px;
+}
+/* Style for <h3> headings within "privacy" and "conditions" sections */
+.privacy h3,
+.conditions h3 {
+    font-size: 23px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+/* Style for paragraphs within "privacy" and "conditions" sections */
+.privacy p,
+.conditions p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+/* Style for the "privacy" section */
+.privacy{
+    background-color: #fddde4;
+    width: 48%;
+    padding: 30px;
+}
+/* Style for the "conditions" section */
+.conditions{
+    background-color: rgb(249, 240, 255);
+    width: 48%;
+    padding: 30px;
+}
+
+/****************************Contact us****************************/
+#sectioncontac {
+    background-image: url('../images/about_banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact{
+    min-height: 100vh;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 85%;
+    background: #E3E6F3;
+    border-radius: 6px;
+    padding: 20px 60px 30px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .content .left-side{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+}
+.content .left-side::before{
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #afafb6;
+}
+.content .left-side .details{
+    margin: 14px;
+    text-align: center;
+}
+.content .left-side .details i{
+    font-size: 30px;
+    color: #3e2093;
+    margin-bottom: 10px;
+}
+.content .left-side .details .topic{
+    font-size: 18px;
+    font-weight: 500;
+}
+.content .left-side .details .text-one,
+.content .left-side .details .text-two{
+    font-size: 14px;
+    color: #afafb6;
+}
+.container .content .right-side{
+    width: 75%;
+    margin-left: 75px;
+}
+.content .right-side .topic-text{
+    font-size: 23px;
+    font-weight: 600;
+    color: #3e2093;
+}
+.right-side .input-box{
+    height: 50px;
+    width: 100%;
+    margin: 20px 0 12px;
+}
+.right-side .input-box input,
+.right-side .input-box textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #F0F1F8;
+    border-radius: 6px;
+    padding: 0 15px;
+    resize: none;
+}
+.right-side .message-box{
+    min-height: 110px;
+}
+.right-side .input-box textarea{
+    padding-top: 6px;
+}
+.right-side .button{
+    display: inline-block;
+    margin-top: 12px;
+}
+.right-side .button input[type="submit"]{
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #3e2093;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button input[type="submit"]:hover{
+    background: #5029bc;
+}
+
+/**************************Footer section***************************/
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styles applied to columns in the footer */
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+/* Styles applied to the logo */
+footer .logo {
+    margin-bottom: 25px;
+    height: 100px;
+    width: 100px;
+}
+
+/* General styles for texts */
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    font-family: 'Spartan', sans-serif;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #714c90;
+}
+
+/* General styles for links and social networks */
+footer .follow {
+    margin-top: 10px;
+}
+
+footer .follow i{
+    padding-right: 4px;
+    cursor: pointer;
+    color: #714c90;
+}
+
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+/* Styles for the payment column image */
+footer .payment img{
+    margin: 10px 0 15px 0;
+    width: 170px;
+    height: 35px;
+}
+
+/* Styles for the "copyright" section */
+footer .copyright {
+    width: 100%;
+}
+
+footer .copyright p {
+    font-size: 11px;
+    text-align: center;
+}
+
+/************************Styles for mobile versions*************************/
+@media (max-width:950px) {
+    .section-p1 {
+        padding: 40px 20px;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 180px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgb(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #714c90;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #714c90;
+        font-size: 24px;
+    }
+
+    #bag {
+        display: none;
+    }
+
+    #banner {
+        height: 100px;
+    }
+
+    #product1 .pro-container {
+        justify-content: center;
+    }
+
+    #product1 .pro {
+        margin: 15px;
+    }
+
+    /* about page */
+    #about-page {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 90%;
+    }
+
+    #about-page .privacy,
+    #about-page .conditions {
+        width: 90%;
+        margin-left: 50px;
+    }
+
+    #about-page .conditions {
+        margin-top: 30px;
+    }
+
+    .container{
+        width: 90%;
+        padding: 30px 40px 40px 35px ;
+    }
+    .container .content .right-side{
+    width: 75%;
+    margin-left: 55px;
+    }
+}
+
+/**********************Styles for smaller mobile versions**********************/
+@media (max-width: 477px) {
+    .section-p1 {
+        padding: 15px;
+    }
+    #header {
+        padding: 10px 30px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    #banner {
+        height: 70px;
+    }
+
+    #banner.about-banner {
+        height: 100%;
+        background-position: center;
+    }
+
+    #product1 .pro {
+        width: 100%;
+    }
+
+    footer .copyright {
+        text-align: start;
+    }
+    /* about page */
+    #about-page {
+        padding: 5px;
+    }
+    /* contact page */
+    .container {
+        margin: 40px 0;
+        height: 100%;
+    }
+    .container .content {
+        flex-direction: column-reverse;
+    }
+    .container .content .left-side {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+    .container .content .left-side::before {
+    display: none;
+    }
+    .container .content .right-side {
+    width: 100%;
+    margin-left: 0;
+    }
+}
